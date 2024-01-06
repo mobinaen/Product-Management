@@ -2,8 +2,8 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework import permissions
 
-from .models import Category, CustomUser, Product
-from .serializers import ProductSerializer, CategorySerializer, CustomUserSerializer
+from .models import Category, CustomUser, Product, Customer, OrderItem
+from .serializers import ProductSerializer, CategorySerializer, CustomUserSerializer, CustomerSerializer, OrderItemSerializer
 
 
 class CustomUserView:
@@ -99,3 +99,50 @@ class ProductView:
         Product.objects.filter(name=name).delete()
         return Response("OK")
 
+
+class CustomerView:
+    @staticmethod
+    @api_view(['GET'])
+    @permission_classes((permissions.AllowAny,))
+    def index(request):
+        name = request.GET["name"]
+        item = Customer.objects.all()
+        serializer = CustomerSerializer(item[0])
+        return Response(serializer.data)
+
+
+class OrderItemView:
+    @staticmethod
+    @api_view(['POST'])
+    @permission_classes((permissions.AllowAny,))
+    def create(request):
+        serializer = OrderItemSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(serializer.data)
+
+    @staticmethod
+    @api_view(['GET'])
+    @permission_classes((permissions.AllowAny,))
+    def index(request):
+        id = request.GET["id"]
+        item = OrderItem.objects.get(id=id)
+        serializer = OrderItemSerializer(item)
+        return Response(serializer.data)
+
+    @staticmethod
+    @api_view(['PATCH'])
+    @permission_classes((permissions.AllowAny,))
+    def update(request):
+        id = request.GET["id"]
+        OrderItem.objects.filter(id=id).update(**request.data)
+        serializer = OrderItemSerializer(OrderItem.objects.get(id=id))
+        return Response(serializer.data)
+
+    @staticmethod
+    @api_view(['DELETE'])
+    @permission_classes((permissions.AllowAny,))
+    def delete(request):
+        id = request.GET["id"]
+        OrderItem.objects.filter(id=id).delete()
+        return Response("OK")

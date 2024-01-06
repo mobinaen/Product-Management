@@ -15,4 +15,11 @@ urlpatterns = [
     path("product/index", views.ProductView.index),
     path("product/update", views.ProductView.update),
     path("product/delete", views.ProductView.delete),
+
+    # path("customer/index", views.CustomerView.index),
+
+    path("orderItem/create", views.OrderItemView.create),
+    path("orderItem/index", views.OrderItemView.index),
+    path("orderItem/update", views.OrderItemView.update),
+    path("orderItem/delete", views.OrderItemView.delete),
 ]
