@@ -10,4 +10,9 @@ urlpatterns = [
 
     path("category/create", views.CategoryView.create),
     path("category/index", views.CategoryView.index),
+
+    path("product/create", views.ProductView.create),
+    path("product/index", views.ProductView.index),
+    path("product/update", views.ProductView.update),
+    path("product/delete", views.ProductView.delete),
 ]
