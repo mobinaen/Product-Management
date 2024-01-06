@@ -1,10 +1,12 @@
 from rest_framework import serializers
 from .models import Category, CustomUser, Customer, Order, OrderItem, Product
 
+
 class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         fields = ('username', 'email', 'first_name', 'last_name')
+
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
