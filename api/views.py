@@ -99,6 +99,13 @@ class ProductView:
         Product.objects.filter(name=name).delete()
         return Response("OK")
 
+    @staticmethod
+    @api_view(['GET'])
+    @permission_classes((permissions.AllowAny,))
+    def moreThan10000(request):
+        items = Product.objects.filter(price__gte=10000).all()
+        serializer = ProductSerializer(items, many=True)
+        return Response(serializer.data)
 
 class CustomerView:
     @staticmethod
@@ -146,3 +153,11 @@ class OrderItemView:
         id = request.GET["id"]
         OrderItem.objects.filter(id=id).delete()
         return Response("OK")
+
+    @staticmethod
+    @api_view(['GET'])
+    @permission_classes((permissions.AllowAny,))
+    def completed(request):
+        items = OrderItem.objects.filter(is_completed__exact=True).all()
+        serializer = OrderItemSerializer(items, many=True)
+        return Response(serializer.data)

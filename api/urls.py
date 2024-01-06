@@ -15,6 +15,7 @@ urlpatterns = [
     path("product/index", views.ProductView.index),
     path("product/update", views.ProductView.update),
     path("product/delete", views.ProductView.delete),
+    path("product/moreThan10000", views.ProductView.moreThan10000),
 
     # path("customer/index", views.CustomerView.index),
 
@@ -22,4 +23,6 @@ urlpatterns = [
     path("orderItem/index", views.OrderItemView.index),
     path("orderItem/update", views.OrderItemView.update),
     path("orderItem/delete", views.OrderItemView.delete),
+    path("orderItem/completed", views.OrderItemView.completed),
+
 ]
