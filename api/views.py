@@ -1,10 +1,9 @@
 from rest_framework.response import Response
-from rest_framework.request import Request
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework import permissions
 
-from .models import Product, CustomUser
-from .serializers import ProductSerializer, CustomerSerializer, CustomUserSerializer
+from .models import Category, CustomUser
+from .serializers import ProductSerializer, CategorySerializer, CustomUserSerializer
 
 
 class CustomUserView:
@@ -42,3 +41,23 @@ class CustomUserView:
         username = request.GET["username"]
         CustomUser.objects.filter(username=username).delete()
         return Response("OK")
+
+
+class CategoryView:
+    @staticmethod
+    @api_view(['POST'])
+    @permission_classes((permissions.AllowAny,))
+    def create(request):
+        serializer = CategorySerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(serializer.data)
+
+    @staticmethod
+    @api_view(['GET'])
+    @permission_classes((permissions.AllowAny,))
+    def index(request):
+        name = request.GET["name"]
+        category = Category.objects.get(name=name)
+        serializer = CategorySerializer(category)
+        return Response(serializer.data)

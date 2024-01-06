@@ -7,4 +7,7 @@ urlpatterns = [
     path("customUser/index", views.CustomUserView.index),
     path("customUser/update", views.CustomUserView.update),
     path("customUser/delete", views.CustomUserView.delete),
+
+    path("category/create", views.CategoryView.create),
+    path("category/index", views.CategoryView.index),
 ]
