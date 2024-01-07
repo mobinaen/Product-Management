@@ -2,8 +2,9 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework import permissions
 
-from .models import Category, CustomUser, Product, Customer, OrderItem
-from .serializers import ProductSerializer, CategorySerializer, CustomUserSerializer, CustomerSerializer, OrderItemSerializer
+from .models import Category, CustomUser, Product, Customer, OrderItem, Order
+from .serializers import ProductSerializer, CategorySerializer, CustomUserSerializer, CustomerSerializer, \
+    OrderItemSerializer
 
 
 class CustomUserView:
@@ -62,6 +63,16 @@ class CategoryView:
         serializer = CategorySerializer(category)
         return Response(serializer.data)
 
+    @staticmethod
+    @api_view(['PATCH'])
+    @permission_classes((permissions.AllowAny,))
+    def appendYekparche(request):
+        items = Category.objects.all()
+        for item in items:
+            item.name = item.name + "Yekparche"
+            item.save()
+        return Response("all are updated")
+
 
 class ProductView:
     @staticmethod
@@ -106,6 +117,7 @@ class ProductView:
         items = Product.objects.filter(price__gte=10000).all()
         serializer = ProductSerializer(items, many=True)
         return Response(serializer.data)
+
 
 class CustomerView:
     @staticmethod
@@ -161,3 +173,12 @@ class OrderItemView:
         items = OrderItem.objects.filter(is_completed__exact=True).all()
         serializer = OrderItemSerializer(items, many=True)
         return Response(serializer.data)
+
+
+class OrderView:
+    @staticmethod
+    @api_view(['DELETE'])
+    @permission_classes((permissions.AllowAny,))
+    def deleteZero(request):
+        Order.objects.filter(total_price__exact=0).delete()
+        return Response("Ok")

@@ -10,6 +10,7 @@ urlpatterns = [
 
     path("category/create", views.CategoryView.create),
     path("category/index", views.CategoryView.index),
+    path("category/appendYekparche", views.CategoryView.appendYekparche),
 
     path("product/create", views.ProductView.create),
     path("product/index", views.ProductView.index),
@@ -24,5 +25,7 @@ urlpatterns = [
     path("orderItem/update", views.OrderItemView.update),
     path("orderItem/delete", views.OrderItemView.delete),
     path("orderItem/completed", views.OrderItemView.completed),
+
+    path("order/deleteZerow", views.OrderView.deleteZero),
 
 ]
