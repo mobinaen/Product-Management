@@ -1,0 +1,1677 @@
+{
+	"info": {
+		"_postman_id": "7396524c-100e-4e51-b652-8eef458d4b63",
+		"name": "Product Management home work",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10852525"
+	},
+	"item": [
+		{
+			"name": "CustomUser",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\": \"ssssssss\",\n    \"last_name\": \"aaadddddddd\",\n    \"username\":\"111\",\n    \"bio\":\"aaaaaaaaa\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/customUser/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"customUser",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 08:54:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS, POST"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "79"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"111\",\n    \"email\": \"\",\n    \"first_name\": \"ssssssss\",\n    \"last_name\": \"aaadddddddd\"\n}"
+						}
+					]
+				},
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/customUser/index?username=111",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"customUser",
+										"index"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "111"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 09:01:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS, GET"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "79"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"111\",\n    \"email\": \"\",\n    \"first_name\": \"ssssssss\",\n    \"last_name\": \"aaadddddddd\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"tttttttt\",\n    \"last_name\": \"hhhhhhhhh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/customUser/update?username=111",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customUser",
+								"update"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "111"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\": \"tttttttt\",\n    \"last_name\": \"hhhhhhhhh\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/customUser/update?username=111",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"customUser",
+										"update"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "111"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 09:13:35 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS, PATCH"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "77"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"111\",\n    \"email\": \"\",\n    \"first_name\": \"tttttttt\",\n    \"last_name\": \"hhhhhhhhh\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/customUser/delete?username=111",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"customUser",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "111"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 09:16:39 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS, DELETE"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "\"OK\""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n \"name\":\"qqqqqqqqq\",\n \"description\":\"ooooooooooo\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/category/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"category",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 09:37:19 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS, POST"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"qqqqqqqqq\"\n}"
+						}
+					]
+				},
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/category/index?name=qqqqqqqqq",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"category",
+										"index"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "qqqqqqqqq"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 09:39:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS, GET"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"qqqqqqqqq\"\n}"
+						}
+					]
+				},
+				{
+					"name": "appendYekparche",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "appendYekparche",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/category/appendYekparche",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"category",
+										"appendYekparche"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 07 Jan 2024 05:57:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "PATCH, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "17"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "\"all are updated\""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"AAAAAAAAA\",\n    \"price\":60000,\n    \"stock_quantity\":100,\n    \"category\":2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/product/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"product",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 10:57:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"AAAAAAAAA\",\n    \"price\": \"60000.000\",\n    \"stock_quantity\": 100,\n    \"category\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/product/index?name=AAAAAAAAA",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"index"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "AAAAAAAAA"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/product/index?name=AAAAAAAAA",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"product",
+										"index"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "AAAAAAAAA"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 11:01:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"AAAAAAAAA\",\n    \"price\": \"60000.000\",\n    \"stock_quantity\": 100,\n    \"category\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"price\":150000,\n    \"stock_quantity\":50,\n    \"category\":2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/product/update?name=AAAAAAAAA",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"product",
+										"update"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "AAAAAAAAA"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 11:05:31 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "PATCH, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"AAAAAAAAA\",\n    \"price\": \"150000.000\",\n    \"stock_quantity\": 50,\n    \"category\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/product/delete?name=AAAAAAAAA",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"product",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "AAAAAAAAA"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 11:07:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "DELETE, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "\"OK\""
+						}
+					]
+				},
+				{
+					"name": "moreThan10000",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/product/moreThan10000",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"product",
+										"moreThan10000"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 11:53:11 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "149"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"name\": \"bbbbbbbbA\",\n        \"price\": \"50000.000\",\n        \"stock_quantity\": 100,\n        \"category\": 1\n    },\n    {\n        \"name\": \"ccccccc\",\n        \"price\": \"70000.000\",\n        \"stock_quantity\": 100,\n        \"category\": 1\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orderItem",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"order\":\"1\" ,\n   \"quantity\":4,\n   \"subtotal\":60000,\n   \"is_completed\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/orderItem/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"orderItem",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 11:33:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"quantity\": 4,\n    \"subtotal\": \"60000.000\",\n    \"is_completed\": true,\n    \"order\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "idnex",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/orderItem/index?id=2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"orderItem",
+										"index"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 11:36:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"quantity\": 2,\n    \"subtotal\": \"70000.000\",\n    \"is_completed\": false,\n    \"order\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 4,\n    \"subtotal\": \"90000.000\",\n    \"is_completed\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/product/update?id=2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantity\": 4,\n    \"subtotal\": \"90000.000\",\n    \"is_completed\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/orderItem/update?id=2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"orderItem",
+										"update"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 11:38:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS, PATCH"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"quantity\": 4,\n    \"subtotal\": \"90000.000\",\n    \"is_completed\": false,\n    \"order\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/orderItem/delete?id=2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"orderItem",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 11:39:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS, DELETE"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "\"OK\""
+						}
+					]
+				},
+				{
+					"name": "completed",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "completed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/orderItem/completed",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"orderItem",
+										"completed"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 11:56:14 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS, GET"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "152"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"quantity\": 4,\n        \"subtotal\": \"60000.000\",\n        \"is_completed\": true,\n        \"order\": 1\n    },\n    {\n        \"id\": 3,\n        \"quantity\": 12,\n        \"subtotal\": \"90000.000\",\n        \"is_completed\": true,\n        \"order\": 1\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "delete zero total price",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "delete zero total price",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/order/deleteZerow",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"order",
+										"deleteZerow"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 07 Jan 2024 05:49:14 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS, DELETE"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "\"Ok\""
+						}
+					]
+				}
+			]
+		}
+	]
+}
